@@ -17,7 +17,7 @@ router.post('/student',async(req,res)=>{
     }
 })
 //read data of all students
-router.get('/student/all',async(req,res)=>{
+router.get('/student',async(req,res)=>{
     try {
         const getStudent= await Student.find({}).sort({"roll":1});
         res.status(200).send(getStudent)
