@@ -9,7 +9,7 @@
     "dev":"nodemon src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ashish Kamat",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
