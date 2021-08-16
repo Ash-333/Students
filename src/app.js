@@ -9,7 +9,7 @@ app.use(router)
 const port = process.env.PORT || 3000;
 
 app.get("/",async(req,res)=>{
-    res.send("Hello world")
+    res.send("Hello world from server to all")
 })
 
 
