@@ -10,7 +10,7 @@ router.post('/student',async(req,res)=>{
         console.log(req.body)
         
         const insertStudent =await addStudent.save();
-        res.send(insertStudent)
+        //res.send(insertStudent)
         res.json('Studednt added Successfully');
     } catch (error) {
         console.log(error)
