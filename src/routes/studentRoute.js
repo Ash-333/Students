@@ -11,9 +11,12 @@ router.post('/student',async(req,res)=>{
         
         const insertStudent =await addStudent.save();
         res.send(insertStudent)
+        res.json('Studednt added Successfully');
     } catch (error) {
         console.log(error)
-        res.status(400).send()
+        res.status(400).json({
+            error: 'Student could not be uploaded'
+        })
     }
 })
 //read data of all students
@@ -23,7 +26,9 @@ router.get('/student/all',async(req,res)=>{
         res.status(200).send(getStudent)
     } catch (error) {
         console.log(error)
-        res.status(400).send()
+        res.status(400).json({
+            error: 'Students not found'
+        })
     }
 })
 
@@ -35,7 +40,9 @@ router.get('/student/:id',async(req,res)=>{
         res.status(200).send(getStudent)
     } catch (error) {
         console.log(error)
-        res.status(400).send()
+        res.status(400).json({
+            error: 'Student could not be found'
+        })
     }
 })
 
